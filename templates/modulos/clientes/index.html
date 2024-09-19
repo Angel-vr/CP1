@@ -1,7 +1,7 @@
 {% include 'header.html' %}
 <h3 class="text-center">Lista de Clientes</h3>
 <div class="text-center">
-    <a href="" class="btn btn-primary">Nuevo</a>
+    <a href="/clientes/create" class="btn btn-primary">Nuevo</a>
 </div>
 <div class="table-responsive"> <br>
     <table class="table">
@@ -15,17 +15,18 @@
             </tr>
         </thead>
         <tbody>
+            {% for cliente in clientes %}
             <tr class="table-primary">
-                <td scope="row">R1C1</td>
-                <td>R1C2</td>
-                <td>R1C3</td>
-                <td></td>
+                <td scope="row">{{ cliente ['id'] }}</td>
+                <td>{{ cliente ['nombre'] }}</td>
+                <td>{{ cliente ['telefono'] }}</td>
+                <td>{{ cliente ['fecha'] }}</td>
                 <td>
                     <a href="" class="btn btn-success">Editar</a>
                     <a href="" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
-
+            {% endfor %}
         </tbody>
     </table>
 </div>
