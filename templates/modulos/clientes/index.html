@@ -22,8 +22,8 @@
                 <td>{{ cliente ['telefono'] }}</td>
                 <td>{{ cliente ['fecha'] }}</td>
                 <td>
-                    <a href="" class="btn btn-success">Editar</a>
-                    <a href="" class="btn btn-danger">Eliminar</a>
+                    <a href="clientes/edit/{{ cliente ['id'] }}" class="btn btn-success">Editar</a>
+                    <a href="clientes/borrar/{{ cliente ['id'] }}" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
             {% endfor %}

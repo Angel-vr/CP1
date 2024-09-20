@@ -1,0 +1,30 @@
+{% include 'header.html' %}
+
+
+<div class="d-flex justify-content-center">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header">Editar Cliente</div>
+            <div class="card-body">
+                <form action="/clientes/edit/actualizar" method="post">
+                    <input type="hidden" name="txtid" value="{{ clientes['id'] }}">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="Nombre" value="{{ clientes ['nombre'] }}" />                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Telefono</label>
+                        <input type="tel" class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="Telefono" pattern="\d{9}" maxlength="9" required value="{{ clientes ['telefono'] }}" />                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" name="fecha" id="" aria-describedby="helpId" value="{{ clientes ['fecha'] }}" />                        
+                    </div>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>   
+</div>
+{% include 'footer.html' %}
